@@ -1,0 +1,240 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* object-fit: cover; */
+
+body {
+    position: relative;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+
+.body-content {
+    width: 100%;
+    min-height: 600px;
+    background-image: url('/img/bg.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.body-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .6);
+}
+
+.container-home {
+    min-height: 700px;
+}
+
+.heading-text {
+    padding: 50px 0;
+    text-transform: uppercase;
+}
+
+.name {
+    font-size: .7em;
+    color: whitesmoke;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.heading-text .tier {
+    margin-top: 20px;
+    font-size: 40px;
+    color: seagreen;
+}
+
+.season {
+    margin-top: 30px;
+}
+
+#teams-card,
+.standings {
+    margin: auto;
+    padding: 50px 0;
+    position: relative;
+}
+
+.favorite {
+    min-height: 600px;
+    padding-bottom: 50px;
+}
+
+#teams-card .card,
+#favorite .card {
+    margin: 30px 0;
+    position: relative;
+    height: 300px;
+}
+
+#teams-card .card-content,
+#favorite .card-content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .6);
+    color: white;
+    transform: scaleY(0);
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+
+#teams-card .card:hover .card-content,
+#favorite .card:hover .card-content {
+    transform: scaleY(1);
+    opacity: 1;
+    transform-origin: top;
+}
+
+#teams-card .card .card-image img,
+#favorite .card .card-image img {
+    padding: 20px;
+    height: 300px;
+}
+
+#favorite .card-favorite {
+    margin: 20px 0;
+    position: relative;
+    padding-bottom: 50px;
+}
+
+.card-action {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card-content .team-name {
+    padding-top: 40px;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.card-content .team-founded {
+    font-size: 14px;
+    padding-bottom: 10px;
+}
+
+.card-content a {
+    color: seashell;
+    position: relative;
+    z-index: 99;
+}
+
+.squad {
+    background-color: rgba(0, 0, 0, .6);
+    position: relative;
+}
+
+h3 {
+    color: white;
+    font-size: 30px;
+}
+
+table {
+    color: white;
+    z-index: 9;
+}
+
+.card-title {
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+
+.card-title p {
+    font-size: .9em;
+    color: white;
+}
+
+.container-home h1 {
+    font-size: 3em;
+    color: white;
+}
+
+.tabs li:hover {
+    background-color: seagreen;
+    cursor: pointer;
+}
+
+.jadwal-team {
+    padding-bottom: 50px;
+}
+
+.jadwal-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 200px;
+    background-color: rgb(35, 105, 65);
+    color: white;
+}
+
+.jadwal-card .card-content h5 {
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.jadwal-card .vs {
+    font-size: 50px;
+    font-weight: bolder;
+    color: rgb(18, 192, 235);
+}
+
+.jadwal-card .card-detail {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .6);
+    transform: scaleX(0);
+    transition: all .5s ease-in-out;
+    opacity: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    text-transform: uppercase;
+}
+
+.jadwal-card:hover .card-detail {
+    transform: scaleX(1);
+    opacity: 1;
+}
+
+.about {
+    position: relative;
+    z-index: 9;
+    padding: 100px 0;
+}
+
+.about .card-panel {
+    background-color: rgba(0, 0, 0, .6);
+    color: white;
+    z-index: 9;
+}
+
+@media screen and (max-width: 576px) {
+    .jadwal-card .card-content h5 {
+        font-size: 20px;
+        font-weight: bolder;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .jadwal-card .card-content h5 {
+        font-size: 25px;
+        font-weight: bolder;
+    }
+}
