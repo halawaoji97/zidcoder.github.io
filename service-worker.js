@@ -79,7 +79,9 @@ if (workbox) {
       url: '/pages/standings.html',
       revision: '2'
     }
-  ])
+  ], {
+    ignoreUrlParametersMatching: [/.*/]
+  });
   workbox.routing.registerRoute(
     new RegExp('/pages/'),
     workbox.strategies.staleWhileRevalidate({
